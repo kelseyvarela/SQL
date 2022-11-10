@@ -1,0 +1,24 @@
+--Create a book list database
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+
+INSERT INTO books VALUES 
+(1, "Maybe In Another Life", 10),
+(2, "Safe Haven", 4),
+(3, "Lock Every Door", 9)
+(4, "Survive The Night", 7.5),
+(5, "The Last Time I Lied, 9.5),
+(6, "Behind The Red Door, 3.5);
+
+--display the database ordered by rating
+SELECT * FROM books 
+ORDER BY rating desc;
+
+--what is the average rating of the books
+SELECT AVG(rating) AS avg_rating FROM books;
+
+--what are the 3 highest rated books
+SELECT name, rating FROM books
+ORDER BY rating desc
+LIMIT 3;
+
